@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/heme_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -9,6 +10,12 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int selectedIndex = 0;
+  List screens = [
+    HomeScreen(),
+    Scaffold(),
+    Scaffold(),
+    Scaffold(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +25,16 @@ class _MainScreenState extends State<MainScreen> {
         child: Row(
           children: [
             GestureDetector(
-              child:  Column(
+              onTap: () => setState(
+                () {
+                  selectedIndex = 0;
+                },
+              ),
+              child: Column(
                 children: [
                   Icon(
                     Icons.home,
-                    color:  selectedIndex == 0 ? Colors.red : Colors.grey,
+                    color: selectedIndex == 0 ? Colors.red : Colors.grey,
                   ),
                   Text(
                     'Home',
@@ -35,6 +47,11 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             GestureDetector(
+              onTap: () => setState(
+                () {
+                  selectedIndex = 1;
+                },
+              ),
               child: Column(
                 children: [
                   Icon(
@@ -52,12 +69,18 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             GestureDetector(
-              child:  Column(
+              onTap: () => setState(
+                () {
+                  selectedIndex = 2;
+                },
+              ),
+              child: Column(
                 children: [
                   Icon(
                     Icons.calculate,
                     color: selectedIndex == 2 ? Colors.red : Colors.grey,
-                  ),  Text(
+                  ),
+                  Text(
                     'Meal Plan',
                     style: TextStyle(
                       fontSize: 14.0,
@@ -67,9 +90,32 @@ class _MainScreenState extends State<MainScreen> {
                 ],
               ),
             ),
+            GestureDetector(
+              onTap: () => setState(
+                () {
+                  selectedIndex = 3;
+                },
+              ),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.settings,
+                    color: selectedIndex == 3 ? Colors.red : Colors.grey,
+                  ),
+                  Text(
+                    'Settings',
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      color: selectedIndex == 3 ? Colors.red : Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
+      body: screens[selectedIndex],
     );
   }
 }
