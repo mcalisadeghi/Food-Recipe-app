@@ -82,7 +82,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     children: List.generate(
                       foods.length,
-                      (index) => Container(),
+                      (index) => Container(
+                        width: 200.0,
+                        child: Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Container(
+                                  width: double.infinity,
+                                  height: 130.0,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(
+                                      15.0,
+                                    ),
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        foods[index].image,
+                                      ),
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ),
