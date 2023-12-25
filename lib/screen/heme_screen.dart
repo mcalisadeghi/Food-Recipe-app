@@ -56,72 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: 20.0,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Quick & Fast',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'View all',
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: List.generate(
-                      foods.length,
-                      (index) => Container(
-                        width: 200.0,
-                        child: Stack(
-                          children: [
-                            Column(
-                              children: [
-                                Container(
-                                  width: double.infinity,
-                                  height: 130.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(
-                                      15.0,
-                                    ),
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                        foods[index].image,
-                                      ),
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  foods[index].name,
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+                            ],
             ),
           ),
         ),
