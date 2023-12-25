@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/models/category.dart';
+import 'package:flutter_application_1/widgets/categories.dart';
 import 'package:flutter_application_1/widgets/home_app_bar.dart';
 import 'package:flutter_application_1/widgets/home_search_bar.dart';
 

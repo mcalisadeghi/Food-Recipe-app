@@ -25,8 +25,8 @@ class Categories extends StatelessWidget {
               ),
             ),
             padding: EdgeInsets.symmetric(
-              horizontal: 30.0,
-              vertical: 5.0,
+              horizontal: 20.0,
+              vertical: 10.0,
             ),
             margin: EdgeInsets.only(
               right: 20.0,
