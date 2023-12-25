@@ -10,7 +10,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int selectedIndex = 0;
-  List screens = [
+  List screens = const [
     HomeScreen(),
     Scaffold(),
     Scaffold(),
@@ -23,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
         color: Colors.white,
         height: 70.0,
         child: Row(
-          children: [
+          children: <Widget>[
             GestureDetector(
               onTap: () => setState(
                 () {
@@ -31,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
                 },
               ),
               child: Column(
-                children: [
+                children: <Widget>[
                   Icon(
                     Icons.home,
                     color: selectedIndex == 0 ? Colors.red : Colors.grey,
@@ -53,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
                 },
               ),
               child: Column(
-                children: [
+                children: <Widget>[
                   Icon(
                     Icons.heart_broken,
                     color: selectedIndex == 1 ? Colors.red : Colors.grey,
@@ -75,7 +75,7 @@ class _MainScreenState extends State<MainScreen> {
                 },
               ),
               child: Column(
-                children: [
+                children: <Widget>[
                   Icon(
                     Icons.calculate,
                     color: selectedIndex == 2 ? Colors.red : Colors.grey,
@@ -97,7 +97,7 @@ class _MainScreenState extends State<MainScreen> {
                 },
               ),
               child: Column(
-                children: [
+                children: <Widget>[
                   Icon(
                     Icons.settings,
                     color: selectedIndex == 3 ? Colors.red : Colors.grey,

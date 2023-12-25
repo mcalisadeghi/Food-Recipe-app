@@ -8,11 +8,11 @@ class QuickAndFastList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+      children:<Widget> [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
+          children:<Widget> [
+            const Text(
               'Quick & Fast',
               style: TextStyle(
                 fontSize: 20.0,
@@ -21,13 +21,13 @@ class QuickAndFastList extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {},
-              child: Text(
+              child: const Text(
                 'View all',
               ),
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 20.0,
         ),
         SingleChildScrollView(
@@ -38,10 +38,10 @@ class QuickAndFastList extends StatelessWidget {
               (index) => Container(
                 width: 200.0,
                 child: Stack(
-                  children: [
+                  children:<Widget> [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children:<Widget> [
                         Container(
                           width: double.infinity,
                           height: 130.0,
@@ -57,47 +57,47 @@ class QuickAndFastList extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
                           foods[index].name,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 15.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(
-                          children: [
-                            Icon(
+                          children:<Widget> [
+                            const Icon(
                               Icons.flash_auto,
                               size: 18.0,
-                              color: const Color.fromARGB(255, 14, 4, 4),
+                              color: Color.fromARGB(255, 14, 4, 4),
                             ),
                             Text(
                               '${foods[index].cal} Cal',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12.0,
                                 color: Colors.grey,
                               ),
                             ),
-                            Text(
+                            const Text(
                               ' + ',
                               style: TextStyle(
                                 color: Colors.grey,
                               ),
                             ),
-                            Icon(
+                            const Icon(
                               Icons.lock_clock,
                               size: 18.0,
                               color: Colors.grey,
                             ),
                             Text(
                               '${foods[index].time} Min',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12.0,
                                 color: Colors.grey,
                               ),
@@ -113,12 +113,12 @@ class QuickAndFastList extends StatelessWidget {
                         onPressed: () {},
                         style: IconButton.styleFrom(
                           backgroundColor: Colors.white,
-                          fixedSize: Size(
+                          fixedSize: const Size(
                             30.0,
                             30.0,
                           ),
                         ),
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.heart_broken,
                         ),
                       ),

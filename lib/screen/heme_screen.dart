@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/models/food.dart';
 import 'package:flutter_application_1/widgets/categories.dart';
 import 'package:flutter_application_1/widgets/home_app_bar.dart';
 import 'package:flutter_application_1/widgets/home_search_bar.dart';
+import 'package:flutter_application_1/widgets/quick_and_fast_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,13 +25,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                HomeAppBar(),
-                SizedBox(
+              children: <Widget>[
+                const HomeAppBar(),
+                const SizedBox(
                   height: 20.0,
                 ),
-                HomeSearchBar(),
-                SizedBox(
+                const HomeSearchBar(),
+                const SizedBox(
                   height: 20.0,
                 ),
                 Container(
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(
                       15.0,
                     ),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       fit: BoxFit.fill,
                       image: AssetImage(
                         'assets/images/explore.png',
@@ -49,14 +49,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
                 Categories(currentCat: currentCat),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
-                            ],
+                const QuickAndFastList()
+              ],
             ),
           ),
         ),

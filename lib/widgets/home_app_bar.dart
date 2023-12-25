@@ -8,8 +8,8 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
-        Text(
+      children: <Widget>[
+        const Text(
           'What are you\ncooking today?',
           style: TextStyle(
             fontSize: 32,
@@ -17,7 +17,7 @@ class HomeAppBar extends StatelessWidget {
             height: 1.0,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         IconButton(
           onPressed: () {},
           style: IconButton.styleFrom(
@@ -27,12 +27,12 @@ class HomeAppBar extends StatelessWidget {
               ),
             ),
             backgroundColor: Colors.white,
-            fixedSize: Size(
+            fixedSize: const Size(
               55.0,
               55.0,
             ),
           ),
-          icon: Icon(
+          icon: const Icon(
             Icons.notifications,
           ),
         ),

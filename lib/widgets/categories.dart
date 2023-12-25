@@ -24,11 +24,11 @@ class Categories extends StatelessWidget {
                 25.0,
               ),
             ),
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 20.0,
               vertical: 10.0,
             ),
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               right: 20.0,
             ),
             child: Text(
