@@ -103,6 +103,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  foods[index].name,
+                                  style: TextStyle(
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ],
                             )
                           ],
