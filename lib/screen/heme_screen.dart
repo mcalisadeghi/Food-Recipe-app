@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/home_app_bar.dart';
+import 'package:flutter_application_1/widgets/home_search_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,53 +25,26 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 20.0,
                 ),
                 HomeSearchBar(),
+                SizedBox(height: 20.0),
+                Container(
+                  width: double.infinity,
+                  height: 170.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      15.0,
+                    ),
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage(
+                        'assets/images/explore.png',
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class HomeSearchBar extends StatelessWidget {
-  const HomeSearchBar({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(
-          15.0,
-        ),
-      ),
-      padding: EdgeInsets.symmetric(
-        horizontal: 20.0,
-        vertical: 5.0,
-      ),
-      child: Row(
-        children: [
-          Icon(
-            Icons.search_rounded,
-          ),
-          SizedBox(
-            width: 10.0,
-          ),
-          Expanded(
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,hintText: 'Search any recipes',
-                hintStyle: TextStyle(
-                  color: Colors.grey,
-                ),
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
